@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {frontmatter} from '../pages/post1.md'
+---
+<Layout>
+<h1 class="title">Sence<h1/>
+<h2 class="greeting">Hello, and welcome to Sence.<h2/>
+<h2 class="intro">
+	Sence is a website run by Adam and Samual. Sence is a website for people who enjoy to think about anything and everything, people who enjoy to analyze those things and look at them from different perspectives to get a better and deeper understanding of those things. It's a website where we make sence of things.
+<h2/>
+
+
+<h1 class="ipost-title"><a href="post1" style="color: #b6b6b6;">{frontmatter.title}</a><h1/>
+
+<style>
+	.title {
+		text-align: center;
+		color: #b6b6b6;
+		font-size: 45px;
+	}
+	.greeting {
+		text-align: center;
+		color: #b6b6b6;
+		font-size: 25px;
+	}
+	.ipost-title {
+		font-size: 25px;
+	}
+	.intro {
+		color: #b6b6b6;
+		font-size: 18px;
+	}
+<style/>

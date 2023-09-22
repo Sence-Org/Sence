@@ -1,0 +1,60 @@
+---
+const {frontmatter} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="A website where we make Sence." />
+		<meta name="viewport" content="width=device-width" />
+		<title>Sence.</title>
+	</head>
+	<body>	
+		<h1 class="title">Sence<h1/>
+		<h2 class="post-title">{frontmatter.title}<h2/>
+		<h2 class="post"><slot /><h2/>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	.title {
+		text-align: center;
+		color: #b6b6b6;
+		font-size: 45px;
+	}
+	.post {
+		color: #b6b6b6;
+		font-size: 18px;
+	}
+	.post-title {
+		text-align: center;
+		color: #b6b6b6;
+		font-size: 25px;
+	}
+</style>
