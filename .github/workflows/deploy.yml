@@ -17,5 +17,5 @@ jobs:
     - name: Upload build artifact
       uses: actions/upload-pages-artifact@v2
       with:
-        path: ${{ env.BUILD_PATH }}/dist
+        path: dist
     - { name: Deploy to GitHub Pages, id: deployment, uses: actions/deploy-pages@v2 }
