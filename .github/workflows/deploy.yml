@@ -1,0 +1,17 @@
+name: Deploy
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    name: Deploy
+    permissions: { pages: write, id-token: write }
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.4.2
+    - { name: Setup Node.js environment, uses: actions/setup-node@v3.1.1, with: { node-version: ">=18" } }
+    - { name: Setup PNPM, uses: pnpm/action-setup@v2.2.1, with: { version: 8.0.0, run_install: true } }
+    - { name: Build, run: pnpm astro build }
+    - { name: Deploy to GitHub Pages, id: deployment, uses: actions/deploy-pages@v2.0.4 }
