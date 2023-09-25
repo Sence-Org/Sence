@@ -3,9 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "Sence-org",
-    "start": "Sence-org",
-    "build": "MVP",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {

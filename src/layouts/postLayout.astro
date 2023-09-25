@@ -12,49 +12,45 @@ const {frontmatter} = Astro.props;
 	<body>	
 		<h1 class="title">Sence<h1/>
 		<h2 class="post-title">{frontmatter.title}<h2/>
-		<h2 class="post"><slot /><h2/>
+		<div><slot /><div/>
 	</body>
+	<footer>
+		<div class="parent">
+  		 <div class="email-footer">Send feedback on feedback@sence.club</div>
+		</div>
+	</footer>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
 	}
 	.title {
 		text-align: center;
 		color: #b6b6b6;
 		font-size: 45px;
 	}
-	.post {
+	div {
 		color: #b6b6b6;
 		font-size: 18px;
+		max-width: 800px;
+		margin: auto;
+  		width: 50%;
+		padding: 10px;
 	}
 	.post-title {
 		text-align: center;
 		color: #b6b6b6;
 		font-size: 25px;
+	}
+	.parent {
+  		position: relative;
+	}
+	.email-footer {
+		font-size: 15px;
+		position: relative;
+  		bottom: 0;
+		width: 100%;
 	}
 </style>
