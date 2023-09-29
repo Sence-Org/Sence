@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {frontmatter} from '../pages/post1.md'
+import * as post1 from '../pages/post1.md'
+import * as post2 from '../pages/post2.md'
 ---
 <Layout>
 <h1 class="title">Sence<h1/>
@@ -10,8 +11,9 @@ import {frontmatter} from '../pages/post1.md'
 <h2/>
 
 
-<h1 style="font-size: 25px;"><a href="post1" style="color: #b6b6b6;">{frontmatter.title}</a><h1/>
+<h1 style="font-size: 25px;"><a href="post1" style="color: #b6b6b6;">{post1.frontmatter.title}</a><h1/>
 
+<h1 style="font-size: 25px;"><a href="post1" style="color: #b6b6b6;">{post2.frontmatter.title}</a><h1/>
 <style>
 	.title {
 		text-align: center;
