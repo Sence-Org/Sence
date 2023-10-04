@@ -1,6 +1,7 @@
 ---
 title: 'Are we too complex for mere words and spoken language?'
 layout: '../layouts/postLayout.astro'
+author: 'By: Adam'
 ---
 
 One of the miracles of modern life is the abundance of ways that one can express themselves. Nowadays, you can express yourself in many, many ways. You can materialize and manifest your intentions and feelings through art, you can shout at the top of your lungs about how you feel through music (although, that isn't really exclusive to the modern day and age), you can make people experience what you're experiencing (to an extent) through games. And many, many more. All of these channels of expressing oneself, for what they're worth, do a pretty great job of letting us express our emotions and feelings through several mediums. Yet, with all of these channels of expression, and now with the ability to express oneself better than ever before. Do we really need to use spoken language for anything but communicating basic meaning and intention? I mean, other mediums do a way better job of expressing more complex and deep emotions, we can leave those to said mediums. 

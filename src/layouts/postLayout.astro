@@ -12,6 +12,7 @@ const {frontmatter} = Astro.props;
 	<body>	
 		<h1 class="title">Sence<h1/>
 		<h2 class="post-title">{frontmatter.title}<h2/>
+		<p style="color: #b6b6b6; text-align: center;">{frontmatter.author}<p/>
 		<div><slot /><div/>
 	</body>
 	<footer>
