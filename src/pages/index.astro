@@ -2,12 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import * as post1 from '../pages/post1.md'
 import * as post2 from '../pages/post2.md'
+import * as post3 from '../pages/post3.md'
 ---
 <Layout>
 <h1 class="title">Sence<h1/>
 <h2 class="greeting">Hello, and welcome to Sence.<h2/>
 <h2 class="intro">
-	Sence is a website run by Adam and Samual. Sence is a website for people who enjoy to think about anything and everything, people who enjoy to analyze those things and look at them from different perspectives to get a better and deeper understanding of those things. It's a website where we make sence of things.
+	Sence is a website run by Adam. Sence is a website for people who enjoy to think about anything and everything, people who enjoy to analyze those things and look at them from different perspectives to get a better and deeper understanding of those things. It's a website where we make sence of things.
 <h2/>
 
 
@@ -16,6 +17,10 @@ import * as post2 from '../pages/post2.md'
 
 <h1 style="font-size: 25px;"><a href="post2" style="color: #b6b6b6;">{post2.frontmatter.title}</a><h1/>
 <p style="color: #b6b6b6;">{post2.frontmatter.author}<p/>
+
+<h1 style="font-size: 25px;"><a href="post3" style="color: #b6b6b6;">{post3.frontmatter.title}</a><h1/>
+<p style="color: #b6b6b6;">{post3.frontmatter.author}<p/>
+
 
 <style>
 	.title {
@@ -32,4 +37,4 @@ import * as post2 from '../pages/post2.md'
 		color: #b6b6b6;
 		font-size: 18px;
 	}
-<style/>
+</style>
