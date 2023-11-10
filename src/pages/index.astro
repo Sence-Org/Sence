@@ -1,9 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import * as post1 from '../pages/post1.md'
-import * as post2 from '../pages/post2.md'
-import * as post3 from '../pages/post3.md'
-import * as post4 from '../pages/post4.md'
+import {  getCollection } from "astro:content";
+const posts = await getCollection("posts");
+
 ---
 <Layout>
 <h2 class="greeting">Hello, and welcome to Sence.<h2/>
@@ -11,20 +10,8 @@ import * as post4 from '../pages/post4.md'
 	Sence is a website run by Adam. Sence is a website for people who enjoy to think about anything and everything, people who enjoy to analyze those things and look at them from different perspectives to get a better and deeper understanding of those things. It's a website where we make sence of things.
 <h2/>
 
-
-<h1 style="ptitle thing"><a href="post1" style="color: #b6b6b6;">{post1.frontmatter.title}</a><h1/>
-<p style="color: #b6b6b6;">{post1.frontmatter.author}<p/>
-
-<h1 style="ptitle thing"><a href="post2" style="color: #b6b6b6;">{post2.frontmatter.title}</a><h1/>
-<p style="color: #b6b6b6;">{post2.frontmatter.author}<p/>
-
-<h1 style="ptitle thing"><a href="post3" style="color: #b6b6b6;">{post3.frontmatter.title}</a><h1/>
-<p style="color: #b6b6b6;">{post3.frontmatter.author}<p/>
-
-<h1 style="ptitle thing"><a href="post4" style="color: #b6b6b6;">{post4.frontmatter.title}</a><h1/>
-<p style="color: #b6b6b6;">{post4.frontmatter.author}<p/>
-
-
+{posts.map(post => (<h1 style="ptitle thing"><a href={post.slug} style="color: #b6b6b6;">{post.data.title}</a><h1/>
+	<p style="color: #b6b6b6;">{post.data.author}<p/> ) )}
 <style>
 	.greeting {
 		text-align: center;

@@ -1,6 +1,5 @@
 ---
 title: 'When does an interpretation stop being an interpretation and become an entirely different vision?'
-layout: '../layouts/postLayout.astro'
 author: 'By: Adam'
 ---
 

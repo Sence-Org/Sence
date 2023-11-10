@@ -1,6 +1,5 @@
 ---
 title: 'Does taking things seriously take the fun out of it?'
-layout: '../layouts/postLayout.astro'
 author: 'By: Adam'
 ---
 

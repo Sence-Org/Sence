@@ -1,0 +1,70 @@
+---
+import {  getEntry, getCollection, type CollectionEntry } from "astro:content";
+type Props = CollectionEntry<"posts">; 
+export async function getStaticPaths() {
+    const posts = await getCollection("posts");
+    const routes : object[] = [];
+    for(const entry of posts) {
+        routes.push({ params: {post: entry.slug}, props: entry })
+    }
+    return routes;
+}
+const entry = Astro.props;
+const data = entry.data;
+const { Content } = await entry.render();  
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="A website where we make Sence." />
+		<meta name="viewport" content="width=device-width" />
+		<title>Sence.</title>
+	</head>
+	<body>	
+		<a href="index.html"><h1 class="title">Sence</h1></a>
+		<h2 class="post-title">{data.title}</h2>
+		<p style="color: #b6b6b6; text-align: center;">{data.author}</p>
+        <div><Content></div>
+	</body>
+	<footer>
+		<div class="parent">
+  		 <div class="email-footer">Send feedback on feedback@sence.club</div>
+		</div>
+	</footer>
+</html>
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	.title, a:link, a:visited {
+		text-align: center;
+		color: #b6b6b6;
+		font-size: 45px;
+		text-decoration: none;
+	}
+	div {
+		color: #b6b6b6;
+		font-size: 18px;
+		max-width: 800px;
+		margin: auto;
+  		width: 50%;
+		padding: 10px;
+	}
+	.post-title {
+		text-align: center;
+		color: #b6b6b6;
+		font-size: 25px;
+	}
+	.parent {
+  		position: relative;
+	}
+	.email-footer, a:link {
+		font-size: 15px;
+		position: relative;
+  		bottom: 0;
+		width: 100%;
+	}
+</style>

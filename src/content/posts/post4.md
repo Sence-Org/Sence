@@ -1,6 +1,5 @@
 ---
 title: 'A note.'
-layout: '../layouts/postLayout.astro'
 author: 'By: Adam'
 ---
 
