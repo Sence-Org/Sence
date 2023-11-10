@@ -10,7 +10,7 @@ const {frontmatter} = Astro.props;
 		<title>Sence.</title>
 	</head>
 	<body>	
-		<h1 class="title">Sence<h1/>
+		<a href="index.html"><h1 class="title">Sence<h1/></a>
 		<h2 class="post-title">{frontmatter.title}<h2/>
 		<p style="color: #b6b6b6; text-align: center;">{frontmatter.author}<p/>
 		<div><slot /><div/>
@@ -27,10 +27,11 @@ const {frontmatter} = Astro.props;
 		background: #13151a;
 		background-size: 224px;
 	}
-	.title {
+	.title, a:link, a:visited {
 		text-align: center;
 		color: #b6b6b6;
 		font-size: 45px;
+		text-decoration: none;
 	}
 	div {
 		color: #b6b6b6;

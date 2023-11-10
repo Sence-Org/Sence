@@ -6,32 +6,26 @@ import * as post3 from '../pages/post3.md'
 import * as post4 from '../pages/post4.md'
 ---
 <Layout>
-<h1 class="title">Sence<h1/>
 <h2 class="greeting">Hello, and welcome to Sence.<h2/>
 <h2 class="intro">
 	Sence is a website run by Adam. Sence is a website for people who enjoy to think about anything and everything, people who enjoy to analyze those things and look at them from different perspectives to get a better and deeper understanding of those things. It's a website where we make sence of things.
 <h2/>
 
 
-<h1 style="font-size: 25px;"><a href="post1" style="color: #b6b6b6;">{post1.frontmatter.title}</a><h1/>
+<h1 style="ptitle thing"><a href="post1" style="color: #b6b6b6;">{post1.frontmatter.title}</a><h1/>
 <p style="color: #b6b6b6;">{post1.frontmatter.author}<p/>
 
-<h1 style="font-size: 25px;"><a href="post2" style="color: #b6b6b6;">{post2.frontmatter.title}</a><h1/>
+<h1 style="ptitle thing"><a href="post2" style="color: #b6b6b6;">{post2.frontmatter.title}</a><h1/>
 <p style="color: #b6b6b6;">{post2.frontmatter.author}<p/>
 
-<h1 style="font-size: 25px;"><a href="post3" style="color: #b6b6b6;">{post3.frontmatter.title}</a><h1/>
+<h1 style="ptitle thing"><a href="post3" style="color: #b6b6b6;">{post3.frontmatter.title}</a><h1/>
 <p style="color: #b6b6b6;">{post3.frontmatter.author}<p/>
 
-<h1 style="font-size: 25px;"><a href="post4" style="color: #b6b6b6;">{post4.frontmatter.title}</a><h1/>
+<h1 style="ptitle thing"><a href="post4" style="color: #b6b6b6;">{post4.frontmatter.title}</a><h1/>
 <p style="color: #b6b6b6;">{post4.frontmatter.author}<p/>
 
 
 <style>
-	.title {
-		text-align: center;
-		color: #b6b6b6;
-		font-size: 45px;
-	}
 	.greeting {
 		text-align: center;
 		color: #b6b6b6;
@@ -40,5 +34,11 @@ import * as post4 from '../pages/post4.md'
 	.intro {
 		color: #b6b6b6;
 		font-size: 18px;
+	}
+	.thing, a:hover {
+		text-decoration: underline;
+	}
+	.ptitle, a:link {
+		font-size: 25px;
 	}
 </style>
