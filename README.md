@@ -1,1 +1,1 @@
-A website where we make Sence.
+An echo chamber.
